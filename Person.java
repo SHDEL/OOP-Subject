@@ -10,5 +10,8 @@ public class Person {
         name = x;
         saving = y;
     }
+    boolean isWeathier(Person obj){
+        return this.saving > obj.saving;
+    }
 
 }
