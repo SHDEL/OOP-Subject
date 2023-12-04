@@ -28,16 +28,18 @@ public class Programmer{
         return getSalary();
     }
     public void setExperience(int exp){
-        
+        this.experience = exp;
     }
-
-    void method2(){
-        System.out.println("from programmer");
+    public int getExperience(){
+        return experience;
     }
     
     @Override
     public String toString() {
-        return "Programmer [languages=" + languages + "]";
+        return "Programmer [name= " + name + "," + " salary=" + salary + "," + " experience=" + experience + "]";
+    }
+    public void sayHi(){
+        System.out.println("hi from" + name);
     }
     
     
