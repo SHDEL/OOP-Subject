@@ -25,7 +25,7 @@ public class Programmer{
         this.salary = newSalary;
     }
     public int getSalary(){
-        return getSalary();
+        return salary;
     }
     public void setExperience(int exp){
         this.experience = exp;
@@ -36,10 +36,10 @@ public class Programmer{
     
     @Override
     public String toString() {
-        return "Programmer [name= " + name + "," + " salary=" + salary + "," + " experience=" + experience + "]";
+        return "Programmer [name= " + getName() + "," + " salary=" + getSalary() + "," + " experience=" + getExperience() + "]";
     }
     public void sayHi(){
-        System.out.println("hi from" + name);
+        System.out.println(" hi from " + this.name);
     }
     
     
