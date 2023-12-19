@@ -1,8 +1,11 @@
 package packA;
-public class Programmer{
+import java.util.ArrayList;
+
+public class Programmer extends Employee{
     private String name;
     protected int salary;
     private int experience;
+    private ArrayList<String> skills;
 
     public Programmer(String n , int exp, int sal){
         name = n;
@@ -33,13 +36,14 @@ public class Programmer{
     public int getExperience(){
         return experience;
     }
-    
-    @Override
     public String toString() {
         return "Programmer [name= " + getName() + "," + " salary=" + getSalary() + "," + " experience=" + getExperience() + "]";
     }
     public void sayHi(){
         System.out.println(" hi from " + this.name);
+    }
+    public String coding(){
+        return "I'm coding";
     }
     
     

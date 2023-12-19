@@ -1,12 +1,12 @@
 package packA;
 
-public class Accountant extends Programmer{
+public class Accountant extends Employee{
     private static String companyName = "berk barn jamkad";
     private int experience;
     private String specialty;
     
     public Accountant(String name, int superExp, int experience, int sal, String talent){
-        super(name, superExp, sal);
+        // super(name, superExp, sal);
         this.experience = experience;
         specialty = talent;
     }
@@ -30,7 +30,7 @@ public class Accountant extends Programmer{
         return "Accountant [experience=" + getAccountExperience() + ", " + "specialty=" + getSpecialty() + "]";
     }
     public void sayHi(){
-        System.out.println(getName() + " says hello");
+        System.out.println(this.name + " says hello");
     }
     public static String tellMyRole(){
         return "I am an accountant at " + companyName ;

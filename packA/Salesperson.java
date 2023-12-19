@@ -1,10 +1,10 @@
 package packA;
 import java.lang.Math;
-public class Salesperson extends Programmer{
+public class Salesperson extends Employee implements SalesRoles{
     private int target;
     
     public Salesperson(String n, int exp, int sal, int assignedTarget){
-        super(n, exp, sal);
+        // super(n, exp, sal);
         target = assignedTarget;
     }
     public Salesperson(String n, int exp){
@@ -27,9 +27,12 @@ public class Salesperson extends Programmer{
         return "Dear value customer, " + num + " is my best offer.";
 
     }
+    public void sayHi(){
+        System.out.println("Hi from salesperson");
+    }
     @Override
     public String toString() {
-        return "Salesperson [target=" + target + " Programmer [name= " + getName() + "," + " salary=" + salary + "," + " experience=" +  getExperience() + "]";
+        return "Salesperson [target=" + target + " Programmer [name= " + this.name + "," + " salary=" + salary + "," + " experience=" +  this.experience + "]";
     }
     
 }
