@@ -5,7 +5,7 @@ public class ProgrammerManager extends Programmer implements ManagerRoles{
         super(n, exp, sal);
     }
     public void sayHi(){
-        System.out.println("Coding in [solidity, typescript]");
+        System.out.println("Coding in [solidity, typescri]");
     }
     public String coding(){
         return " ";

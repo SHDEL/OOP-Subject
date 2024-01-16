@@ -23,5 +23,6 @@ public class Lab4_3 {
             int newSalary = pmanager.evaluate(p);
             System.out.println(newSalary);
         }
+        
     }
 }
