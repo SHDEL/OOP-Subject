@@ -44,7 +44,7 @@ public class Gamelec6 {
         btnNew = new JButton("new game");
         btnNext.setPreferredSize(new Dimension(150, 50));
         lbScore.setPreferredSize(new Dimension(50, 50));
-        tfScore.setPreferredSize(new Dimension(50, 50));
+        tfScore.setPreferredSize(new Dimension(100, 50));
         lTile.setPreferredSize(new Dimension(200, 200));
         rTile.setPreferredSize(new Dimension(200, 200));
         btnNew.setPreferredSize(new Dimension(200, 50));
