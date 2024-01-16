@@ -12,4 +12,5 @@ public class Lab4 {
         duck.swim();
         duck.duckMethod();
     }
+    
 }
