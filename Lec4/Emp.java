@@ -6,9 +6,7 @@ public abstract class Emp {
         return name;
     }
     abstract void vacation();
-    
-    
-    
+ 
 }
 
 class Programmer extends Emp{

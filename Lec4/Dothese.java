@@ -5,8 +5,6 @@ public interface Dothese {
     public default void test(){
         System.out.println("test");
     }
-    
-  
 }
 class Sales implements Dothese{
     String name;

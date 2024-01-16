@@ -1,6 +1,6 @@
 package Lab7;
 
-abstract class Book {
+abstract class Book extends Library{
     protected String isbn;
     protected String title;
     protected String author;
@@ -20,6 +20,14 @@ abstract class Book {
         year = yr;
         numberOfPages = numPages;
     }
+    // public Book(String title, String author, String pub, int yr, int numPages){
+    //     this.title = title;
+    //     this.author = author;
+    //     publisher = pub;
+    //     year = yr;
+    //     numberOfPages = numPages;
+    // }
+
     public void turnPageForward(){
 
     }
