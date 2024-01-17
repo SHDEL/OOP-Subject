@@ -23,8 +23,6 @@ public class LibraryBook extends Book implements BorrowAble{
     }
     @Override
     public String toString() {
-        checkoutitem(2024, 1, 10);
-        returnitem(2024, 1, 16);
         return "LibraryBook [id=" + id + ", title=" + getTitle() + " type=" + type + ", avail=" + isAvailable() + "]";
     }
     public boolean isAvailable(){
