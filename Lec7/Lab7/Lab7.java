@@ -22,9 +22,12 @@ public class Lab7 {
     }
     static void demo2() { //main()
         Library lib = new Library();
-        Book b1 = lib.getBookById(1); Book b2 = lib.getBookById(2);
-        Book b3 = lib.getBookById(3); Book b4 = lib.getBookById(4);
-        Book b5 = lib.getBookById(5); Book b6 = lib.getBookById(6);
+        Book b1 = lib.getBookById(1); 
+        Book b2 = lib.getBookById(2);
+        Book b3 = lib.getBookById(3); 
+        Book b4 = lib.getBookById(4);
+        Book b5 = lib.getBookById(5); 
+        Book b6 = lib.getBookById(6);
         System.out.println(lib.checkOut(b2, 0, 0, 0)); // ecopy false
         System.out.println(lib.checkOut(b5, 0, 0, 0)); // archive false
         lib.checkIn(b1, 0, 0, 0); // still in lib the item has not been check out

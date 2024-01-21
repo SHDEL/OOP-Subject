@@ -2,8 +2,6 @@ package Lab7;
 import java.time.LocalDate;
 import java.util.HashMap;
 
-import Lec6.testgui;
-
 public class Library{
     private HashMap<Integer, Book> allbooks;
 

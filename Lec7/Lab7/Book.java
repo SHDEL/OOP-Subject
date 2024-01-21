@@ -27,15 +27,14 @@ abstract class Book extends Library{
     //     year = yr;
     //     numberOfPages = numPages;
     // }
-
     public void turnPageForward(){
-
+        this.numberOfPages += 1;
     }
     public void turnPageBackward(){
-
+        this.numberOfPages -= 1;
     }
     public int nowAtPage(){
-
+        return this.numberOfPages;
     }
     public String getTitle(){
         return this.title;
