@@ -1,7 +1,4 @@
 package Lab1;
-/**
- * Person
- */
 class Person {
 
     String name;
