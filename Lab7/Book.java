@@ -9,6 +9,7 @@ abstract class Book extends Library{
     protected int numberOfPages;
     private int currentPageNumber;
 
+
     public Book(){
 
     }
@@ -19,6 +20,7 @@ abstract class Book extends Library{
         publisher = pub;
         year = yr;
         numberOfPages = numPages;
+        currentPageNumber = 0;
     }
     // public Book(String title, String author, String pub, int yr, int numPages){
     //     this.title = title;
@@ -28,13 +30,19 @@ abstract class Book extends Library{
     //     numberOfPages = numPages;
     // }
     public void turnPageForward(){
-        this.numberOfPages += 1;
+        this.currentPageNumber += 1;
     }
     public void turnPageBackward(){
-        this.numberOfPages -= 1;
+        if(this.currentPageNumber == 0){
+            System.out.println("can't turn page backward");
+            System.out.println("Now at page: " + this.currentPageNumber);
+        }
+        else{
+            this.currentPageNumber -= 1;
+        }
     }
     public int nowAtPage(){
-        return this.numberOfPages;
+        return this.currentPageNumber;
     }
     public String getTitle(){
         return this.title;

@@ -1,5 +1,4 @@
 package Lab7;
-import java.time.LocalDate;
 import java.util.HashMap;
 
 public class Library{
@@ -15,6 +14,7 @@ public class Library{
         if (item instanceof LibraryBook){
             LibraryBook book = (LibraryBook) item;
             boolean result = book.checkoutitem(yy, mm, dd);
+            
             return result;
         }
         else{
