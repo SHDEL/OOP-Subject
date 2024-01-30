@@ -14,15 +14,17 @@ public class Lab8_660019 {
     static List<Singer> singerList;
     static {
         singerList = new ArrayList<>();
-        singerList.add(new Singer("aba", Style.POP));
-        singerList.add(new Singer("abi", Style.ROCK));
-        singerList.add(new Singer("abo", Style.ROCK));
-        singerList.add(new Singer("abe", Style.POP));
+        singerList.add(new Singer("Aba", Style.POP));
+        singerList.add(new Singer("Abi", Style.ROCK));
+        singerList.add(new Singer("Abo", Style.POP));
+        singerList.add(new Singer("Abe", Style.ROCK));
     }
     public static void main(String[] args) {
         // q1_halfEachNumber();
         // q2_forEachSingerName();
-        q3_lambda_comparator();
+        // q3_lambda_comparator();
+        // q4_method_reference_comparator();
+        q5();
         
     }
     public static void q1_halfEachNumber() {
@@ -49,8 +51,8 @@ public class Lab8_660019 {
         Consumer<Integer> consumer = n -> System.out.println(n / 2);  /* q1.2 */     
         for (int n : nums) {         
             consumer.accept(n);
-            // [100, 105]
-            // [100, 105]
+            // 50
+            // 52
         }
         // 
         Consumer<Integer> halfMe = n -> System.out.println(n / 2);     
@@ -68,8 +70,9 @@ public class Lab8_660019 {
         // 52
     }
     public static void q2_forEachSingerName(){
-
+        System.out.println("----Q2.1----");
         singerList.stream().map(singerList -> singerList.getName()).forEach(System.out::println);
+        System.out.println("----Q2.2----");
         singerList.stream().map(Singer::getName).forEach(System.out::println);
     }
     public static void q3_lambda_comparator(){
@@ -81,9 +84,27 @@ public class Lab8_660019 {
         };
         Collections.sort(singerList, byStyle1);
         singerList.forEach(System.out::println);
-        
+
+        System.out.println("----Q3.1----");
+
         Comparator<Singer> byStyle2 = (o1,o2) -> o1.getStyle().compareTo(o2.getStyle());
         Collections.sort(singerList, byStyle2);
+        singerList.forEach(System.out::println);
+    }
+    public static void q4_method_reference_comparator(){
+        System.out.println("----Q4.1----");
+        Comparator<Singer> byName = Comparator.comparing(Singer::getName);
+        Collections.sort(singerList, byName);
+        singerList.forEach(System.out::println);
+        System.out.println("----Q4.2----");
+        singerList.sort((s1,s2) -> s1.getStyle().compareTo(s2.getStyle()));
+        singerList.forEach(System.out::println);
+    }
+    public static void q5(){
+        Collections.sort(singerList,Singer::compareByName);
+        singerList.forEach(System.out::println);
+        System.out.println("--------------------");
+        singerList.sort(Singer::compareByName);
         singerList.forEach(System.out::println);
     }
 }
@@ -111,6 +132,12 @@ class Singer{
     }
     public String getStyleString(){
         return style.toString();
+    }
+    public int compareByName(Singer s){
+        return name.compareTo(s.getName());
+    }
+    public int compareByStyle(Singer s){
+        return style.compareTo(s.getStyle());
     }
 }
 enum Style{
