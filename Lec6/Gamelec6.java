@@ -16,7 +16,7 @@ public class Gamelec6 {
     JFrame f;
     JButton btnNext;
     JLabel lbScore;
-    JTextField tfScore;
+    JLabel tfScore;
     JButton lTile;
     JButton rTile;
     JButton btnNew;
@@ -37,8 +37,8 @@ public class Gamelec6 {
     }
     void detailComponents(){
         btnNext = new JButton("next guess");
-        lbScore = new JLabel("Score");
-        tfScore = new JTextField("0");
+        lbScore = new JLabel("Score:");
+        tfScore = new JLabel("0");
         lTile = new JButton("blue");
         rTile = new JButton("orange");
         btnNew = new JButton("new game");
