@@ -16,6 +16,9 @@ public class Employee{
         int memAddress = System.identityHashCode(this);
         id = Integer.toHexString(memAddress);
     }
+    public void setName(String s){
+        name = s;
+    }
     @Override
     public String toString(){
         return id + " [" + name + "(" + salary + ")]";

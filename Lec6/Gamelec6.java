@@ -91,7 +91,7 @@ public class Gamelec6 {
             if (source == lTile && !hasPlayed){
                 if(turnvalue == 0){
                     lTile.setIcon(meow300);
-                    int score = Integer.parseInt(tfScore.getText()) + 4000000;
+                    int score = Integer.parseInt(tfScore.getText()) + 1;
                     tfScore.setText("" + score);
                 }
                 else{
