@@ -19,6 +19,12 @@ public class Employee{
     public void setName(String s){
         name = s;
     }
+    public String getName(){
+        return this.name;
+    }
+    public Integer getSalary(){
+        return this.salary;
+    }
     @Override
     public String toString(){
         return id + " [" + name + "(" + salary + ")]";
