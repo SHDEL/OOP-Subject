@@ -1,5 +1,3 @@
-package Lec9;
-
 public class Employee{
     String id;
     String name;
