@@ -1,4 +1,6 @@
 package pack10_CSmovie;
+import java.util.Arrays;
+
 public class CSMovie {
     private String title;
     private String rating;
@@ -16,13 +18,11 @@ public class CSMovie {
     private String company;
     private Integer runtime;
 
-
-
-    public CSMovie(String title, String rating, String genre, 
-                   Integer year, Double score, Integer votes,
-                   String director, String star, String country, 
-                   Integer budget, Long gross, String company,
-                    Integer runtime) {
+    public CSMovie(String title, String rating, String genre,
+            Integer year, Double score, Integer votes,
+            String director, String star, String country,
+            Integer budget, Long gross, String company,
+            Integer runtime) {
         this.title = title;
         this.rating = rating;
         this.genre = genre;
@@ -38,6 +38,11 @@ public class CSMovie {
         this.runtime = runtime;
     }
 
+    private String unFloat(String k) {
+        k = k.replaceAll("[.][0-9]+", "");
+        return k.length() > 0 ? k : "0";
+    }
+
     public CSMovie(String line) {
         String[] tokens = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
         if (tokens.length == 15) {
@@ -46,19 +51,17 @@ public class CSMovie {
             genre = tokens[2];
             year = Integer.parseInt(tokens[3]);
             score = Double.parseDouble(tokens[5]);
-            String [] token6 = tokens[6].split(".");
-            //System.out.println(title + " " + tokens[6]);
-            //token6[0] = token6[0].isEmpty()?"0" : token6[0];
-            votes = Integer.parseInt(token6[0]);
+            String token6 = unFloat(tokens[6]);
+            votes = Integer.parseInt(token6);
             director = tokens[7];
             star = tokens[9];
             country = tokens[10];
-            String token11 = tokens[11].isEmpty()?"0" : tokens[11];
+            String token11 = unFloat(tokens[11]);
             budget = Integer.parseInt(token11);
-            String token12 = tokens[12].isEmpty()?"0" : tokens[12];
+            String token12 = unFloat(tokens[12]);
             gross = Long.parseLong(token12);
             company = tokens[13];
-            String token14 = tokens[14].isEmpty()?"0" : tokens[14];
+            String token14 = unFloat(tokens[14]);
             runtime = Integer.parseInt(token14);
         }
     }
@@ -146,7 +149,4 @@ public class CSMovie {
             return false;
         return true;
     }
-
-    
-
 }
